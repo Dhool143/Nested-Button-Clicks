@@ -10,6 +10,7 @@ function NestedButtons() {
     }
 
     function handleInnerClick(e) {
+        e.stopPropagation();
         alert("Inner container clicked")
         console.log("Inner container clicked")
 
@@ -19,11 +20,13 @@ function NestedButtons() {
 
         <div onClick={handleOuterClick} 
         style={{
-            padding: "40px",
-            backgroundColor: "#dbeafe",
-            textAlign: "center",
-            borderRadius: "10px",
-
+            padding: "10px 20px",
+            fontSize: "16px",
+            cursor: "pointer",
+            backgroundColor: "#2563eb",
+            color: "white",
+            border: "none",
+            borderRadius: "5px"
         }}
     
         > 
